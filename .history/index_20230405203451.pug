@@ -1,0 +1,83 @@
+include ./mixins/mixins
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Practice Website
+        link(rel="stylesheet", href="./main.css")
+        link(rel='preconnect', href='https://fonts.googleapis.com')
+        link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap', rel='stylesheet')
+        link(rel='preconnect', href='https://fonts.googleapis.com')
+        link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Delicious+Handrawn&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap', rel='stylesheet')
+        link(rel='preconnect', href='https://fonts.googleapis.com')
+        link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Delicious+Handrawn&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap', rel='stylesheet')
+
+
+
+    body 
+        section.top-tour 
+            .container 
+                h2.heading Top Bangkok Tours    
+                .tour-list 
+                    +tourItem("https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=683&q=80", "From $40", "Thailands Ayutthaya Temples Cruise from Bangkok Thailands Ayutthaya Temples Cruise from Bangkok", 4.8, 20, "9 hours", 55)
+                    +tourItem("https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80", "From $60","FLoating Markets Day Trip from Bangkok", 4.5, 30, "15 hours", 88)
+                    +tourItem("https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80", "From $60","FLoating Markets Day Trip from Bangkok", 4.5, 30, "15 hours", 88)
+        section.popular
+            .container
+                h2.heading Popular things to do in Bangkok
+                .popular-list
+                    +popularItem()
+                    +popularItem()
+                    +popularItem()
+                    +popularItem()
+        section.gems 
+            .container 
+                h2.heading Hiddens gems in Bangkok 
+                .gem-list 
+                    each value in ["https://images.unsplash.com/photo-1604537466158-719b1972feb8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80","https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1635&q=80","https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80","https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1721&q=80","https://images.unsplash.com/photo-1530521954074-e64f6810b32d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"]
+                        .gem-item 
+                            img(src= value  , alt="")
+        section.diamond
+            .container 
+                h2.heading Hiddens gems in Bangkok 
+                .diamond-list 
+                    each val in ["https://images.unsplash.com/photo-1530521954074-e64f6810b32d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80", "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80", "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1421&q=80", "https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80"]
+                        .diamond-item 
+                            .diamond-img 
+                                .diamond-over-lay
+                                img(src= val, alt="")
+                                .diamond-content 
+                                    h3.diamond-title Bangkok Trip
+                                    span.diamond-time 27 Sep, 2020
+                a.button.diamond-all(href="#") Explore All 
+        footer.footer 
+            .container.footer-container 
+                .footer-top 
+                    .footer-columns 
+                        .footer-column
+                        .footer-column
+                            h4.footer-heading Services
+                            ul.footer-links 
+                                 each val in ["Trip Planner","Tour Planning","Tour Guide","Tour Package","Tour advice"]
+                                    li.footer-item
+                                        a.footer-link(href="#")= val 
+                        .footer-column
+                            h4.footer-heading Services
+                            ul.footer-links 
+                                each val in ["Trip Planner","Tour Planning","Tour Guide","Tour Package","Tour advice"]
+                                    li.footer-item
+                                        a.footer-link(href="#")= val 
+                        .footer-column 
+                             h4.footer-heading Services
+                            ul.footer-links 
+                                each val in ["Trip Planner","Tour Planning","Tour Guide","Tour Package","Tour advice"]
+                                    li.footer-item
+                                        a.footer-link(href="#")= val 
+                .footer-bottom
+                    

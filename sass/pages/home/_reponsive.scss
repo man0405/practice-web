@@ -1,0 +1,67 @@
+@media screen and (max-width: 767.98px) {
+  .container {
+    padding: 0 24px;
+  }
+  .heading {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--gray-1);
+  }
+  .tour-list {
+    --gap: 20px;
+    --columns: 1;
+  }
+  .tour-top {
+    height: 211px;
+    margin-bottom: 18px;
+  }
+  .tour-price {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .tour-contents {
+    margin: 0 18px;
+  }
+  .tour-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 9px;
+  }
+  .tour-rating {
+    margin-bottom: 18px;
+  }
+  .tour-duration,
+  .tour-review-count {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .tour-button {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .popular-list {
+    --columns: 1;
+  }
+  .popular-item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+  .tour-item {
+    --columns: 2;
+  }
+
+  .popular-list {
+    --columns: 2;
+  }
+  .popular-item {
+    width: 100%;
+  }
+}

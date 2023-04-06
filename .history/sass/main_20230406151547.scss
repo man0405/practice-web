@@ -1,0 +1,165 @@
+@import "./abstracts/variables";
+@import "./base/rest";
+@import "./base/general";
+@import "./components/typography";
+
+@import "./layout/footer";
+@import "./layout/header";
+@import "./pages/home";
+
+/* diamond */
+
+.diamond .container {
+  max-width: 998px;
+}
+
+.diamond .heading {
+  text-align: center;
+}
+
+.diamond-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 220px 220px;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.diamond-item {
+  background-color: #ffffff;
+  box-shadow: 0px 30px 110px rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.diamond-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: inherit;
+}
+
+.diamond-over-lay {
+  position: absolute;
+  background: linear-gradient(
+    3.19deg,
+    rgba(0, 0, 0, 0.6) 17.99%,
+    rgba(0, 0, 0, 0) 55.56%
+  );
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.diamond-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.diamond-content {
+  position: absolute;
+  left: 30px;
+  bottom: 14px;
+  color: #ffffff;
+}
+
+.diamond-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.diamond-time {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.428;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 9px 40px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: calc(36 / 24);
+  width: fit-content;
+  margin-inline: auto;
+  border-radius: 100rem;
+}
+
+@media screen and (max-width: 767.98px) {
+  .container {
+    padding: 0 24px;
+  }
+  .heading {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--gray-1);
+  }
+  .tour-list {
+    --gap: 20px;
+    --columns: 1;
+  }
+  .tour-top {
+    height: 211px;
+    margin-bottom: 18px;
+  }
+  .tour-price {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .tour-contents {
+    margin: 0 18px;
+  }
+  .tour-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 9px;
+  }
+  .tour-rating {
+    margin-bottom: 18px;
+  }
+  .tour-duration,
+  .tour-review-count {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .tour-button {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .popular-list {
+    --columns: 1;
+  }
+  .popular-item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+  .tour-item {
+    --columns: 2;
+  }
+
+  .popular-list {
+    --columns: 2;
+  }
+  .popular-item {
+    width: 100%;
+  }
+}

@@ -1,0 +1,81 @@
+include ./views/mixins/mixins
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Practice Website
+        link(rel="stylesheet", href="./main.css")
+        link(rel='preconnect', href='https://fonts.googleapis.com')
+        link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap', rel='stylesheet')
+        link(rel='preconnect', href='https://fonts.googleapis.com')
+        link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Delicious+Handrawn&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap', rel='stylesheet')
+        link(rel='preconnect', href='https://fonts.googleapis.com')
+        link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Delicious+Handrawn&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap', rel='stylesheet')
+
+
+
+    body 
+        header 
+        main 
+            include ./views/home/TopTour
+            include ./views/home/Popular
+            include ./views/home/Gems
+            
+            
+            section.diamond
+                .container 
+                    h2.heading Hiddens gems in Bangkok 
+                    .diamond-list 
+                        each val in ["https://images.unsplash.com/photo-1530521954074-e64f6810b32d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80", "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80", "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1421&q=80", "https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80"]
+                            .diamond-item 
+                                .diamond-img 
+                                    .diamond-over-lay
+                                    img(src= val, alt="")
+                                    .diamond-content 
+                                        h3.diamond-title Bangkok Trip
+                                        span.diamond-time 27 Sep, 2020
+                    a.button.diamond-all(href="#") Explore All 
+        footer.footer 
+            .container.footer-container 
+                .footer-top 
+                    .footer-columns 
+                        .footer-column
+                            a(href="/").footer-logo 
+                                img(srcSet ="./img/logo.png 2x", alt="Logo")
+                            p.footer-decs Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.
+                            form.subscribe
+                                input(type="email", placeholder="Enter your email").subscribe-email
+                                button(type="submit").subscribe-button
+                                    img(srcSet="./img/icon-arrow-right.png 2x", alt="icon-arrow-right")
+                        .footer-column
+                            h4.footer-heading Services
+                            ul.footer-links 
+                                each val in ["Trip Planner","Tour Planning","Tour Guide","Tour Package","Tour advice"]
+                                    li.footer-item
+                                        a.footer-link(href="#")= val 
+                        .footer-column
+                            h4.footer-heading Services
+                            ul.footer-links 
+                                each val in ["Trip Planner","Tour Planning","Tour Guide","Tour Package","Tour advice"]
+                                    li.footer-item
+                                        a.footer-link(href="#")= val 
+                        .footer-column 
+                            h4.footer-heading Services
+                            ul.footer-links 
+                                each val in ["Trip Planner","Tour Planning","Tour Guide","Tour Package","Tour advice"]
+                                    li.footer-item
+                                        a.footer-link(href="#")= val
+                .footer-bottom
+                    p.footer-copyright Copyright© 2023 UIHUT LLC. All rights reserved
+                    .footer-sn-list 
+                        each s in [1,2,3,4]
+                            .footer-sn-item 
+                                a(href="#").footer-sn-link 
+                                    img(srcSet="./img/icon-fb.svg", alt="")
+                    

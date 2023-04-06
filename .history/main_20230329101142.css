@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  /* font-family: "Pacifico", cursive;
+  font-family: "Roboto", sans-serif; */
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 1170px;
+  margin: 50px auto;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 34px;
+}
+
+.tour-item {
+  border-radius: 10px;
+}
+
+.tour-top {
+  height: 239px;
+  width: 370px;
+  position: relative;
+}
+
+.tour-image {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  object-fit: cover;
+}
+
+.tour-price {
+  position: absolute;
+  top: 24px;
+  left: 30px;
+}

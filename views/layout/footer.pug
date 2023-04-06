@@ -1,0 +1,38 @@
+footer.footer 
+    .container.footer-container 
+        .footer-top 
+            .footer-columns 
+                .footer-column
+                    a(href="/").footer-logo 
+                        img(srcSet ="./img/logo.png 2x", alt="Logo")
+                    p.footer-decs Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.
+                    form.subscribe
+                        input(type="email", placeholder="Enter your email").subscribe-email
+                        button(type="submit").subscribe-button
+                            img(srcSet="./img/icon-arrow-right.png 2x", alt="icon-arrow-right")
+                .footer-column
+                    h4.footer-heading Services
+                    ul.footer-links 
+                        each val in ["Trip Planner","Tour Planning","Tour Guide","Tour Package","Tour advice"]
+                            li.footer-item
+                                a.footer-link(href="#")= val 
+                .footer-column
+                    h4.footer-heading Services
+                    ul.footer-links 
+                        each val in ["Trip Planner","Tour Planning","Tour Guide","Tour Package","Tour advice"]
+                            li.footer-item
+                                a.footer-link(href="#")= val 
+                .footer-column 
+                    h4.footer-heading Services
+                    ul.footer-links 
+                        each val in ["Trip Planner","Tour Planning","Tour Guide","Tour Package","Tour advice"]
+                            li.footer-item
+                                a.footer-link(href="#")= val
+        .footer-bottom
+            p.footer-copyright Copyright© 2023 UIHUT LLC. All rights reserved
+            .footer-sn-list 
+                each s in [1,2,3,4]
+                    .footer-sn-item 
+                        a(href="#").footer-sn-link 
+                            img(srcSet="./img/icon-fb.svg", alt="")
+            
